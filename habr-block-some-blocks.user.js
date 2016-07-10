@@ -15,7 +15,7 @@
 // @include     https://geektimes.ru/article/*
 // @grant       none
 // @run-at      document-start
-// @version     0.1
+// @version     0.2
 // @downloadURL https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.user.js
 // @updateURL   https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.meta.js
 // ==/UserScript==
@@ -33,7 +33,7 @@
 window.addEventListener('load', function () {
   
   // similar articles
-  $(".similar-posts.similar-posts_full").remove();
+  $(".similar-posts").remove();
   $(".live-broadcast").remove();
 
   // allow ads recomendation
@@ -47,4 +47,31 @@ window.addEventListener('load', function () {
   // interesting articles
   $(".live-broadcast.live-broadcast_feed").remove();
 
+  // company widgets
+  $(".company_widgets").remove();
+  
+  // dronk.ru
+  var mainLink = $("a > img[src='https://habrastorage.org/getpro/geektimes/post_images/a21/7b2/4d4/a217b24d43f7add28412427e5ce9e54b.png']").parent();
+  if (mainLink.length > 0) {
+    var elemsToDelete = [ mainLink[0] ];
+    var isHrFound = false;
+    var nextElem = mainLink[0];
+    for (var i = 0; i < 15 && nextElem != null; i++) {
+      nextElem = nextElem.previousSibling;
+      elemsToDelete.push(nextElem);
+      if (nextElem.nodeName == "HR") {
+        isHrFound = true;
+        break;
+      }
+    }
+    if (!isHrFound) {
+      var elemsToDelete = [ mainLink[0] ];
+    }
+    nextElem = mainLink[0];
+    while ((nextElem = nextElem.nextSibling) != null) {
+      elemsToDelete.push(nextElem);
+    }
+    elemsToDelete.map(function(item){ $(item).remove(); });
+  }
+  
 });
