@@ -15,7 +15,7 @@
 // @include     https://geektimes.ru/article/*
 // @grant       none
 // @run-at      document-start
-// @version     0.3
+// @version     0.4
 // @downloadURL https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.user.js
 // @updateURL   https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.meta.js
 // ==/UserScript==
@@ -56,6 +56,9 @@ window.addEventListener('load', function () {
     elem.remove();
   }
   
+  // blank ads holder
+  $(".dfp-slot").remove();
+
   // bottom shit - interesting articles
   $(".default-block__header-title:contains('Интересные публикации')").closest(".default-block").remove();
   
