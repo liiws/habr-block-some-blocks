@@ -15,7 +15,7 @@
 // @include     https://geektimes.ru/article/*
 // @grant       none
 // @run-at      document-start
-// @version     0.4
+// @version     0.5
 // @downloadURL https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.user.js
 // @updateURL   https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.meta.js
 // ==/UserScript==
@@ -61,6 +61,8 @@ window.addEventListener('load', function () {
 
   // bottom shit - interesting articles
   $(".default-block__header-title:contains('Интересные публикации')").closest(".default-block").remove();
+  // other
+  $(".promo-block__header").closest(".default-block_content").remove();
   
   // dronk.ru
   var mainLink = $("a > img[src='https://habrastorage.org/getpro/geektimes/post_images/a21/7b2/4d4/a217b24d43f7add28412427e5ce9e54b.png']").parent();
