@@ -29,8 +29,8 @@
 // @grant       none
 // @run-at      document-start
 // @version     0.5.1
-// @downloadURL https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.user.js
-// @updateURL   https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.meta.js
+// @downloadURL https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.user.js
+// @updateURL   https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.meta.js
 // ==/UserScript==
 
 
