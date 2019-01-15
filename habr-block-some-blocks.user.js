@@ -1,36 +1,17 @@
 ﻿// ==UserScript==
 // @name        habr-block-some-blocks
-// @namespace   http://habrahabr.ru
-// @include     http://habrahabr.ru/post/*
-// @include     http://habrahabr.ru/company/*
-// @include     http://habrahabr.ru/article/*
-// @include     http://geektimes.ru/post/*
-// @include     http://geektimes.ru/company/*
-// @include     http://geektimes.ru/article/*
-// @include     https://habrahabr.ru/post/*
-// @include     https://habrahabr.ru/company/*
-// @include     https://habrahabr.ru/article/*
-// @include     https://geektimes.ru/post/*
-// @include     https://geektimes.ru/company/*
-// @include     https://geektimes.ru/article/*
 // @namespace   http://habr.com
-// @include     http://habr.com/post/*
-// @include     http://habr.com/company/*
-// @include     http://habr.com/article/*
-// @include     http://geektimes.com/post/*
-// @include     http://geektimes.com/company/*
-// @include     http://geektimes.com/article/*
-// @include     https://habr.com/post/*
-// @include     https://habr.com/company/*
-// @include     https://habr.com/article/*
-// @include     https://geektimes.com/post/*
-// @include     https://geektimes.com/company/*
-// @include     https://geektimes.com/article/*
+// @include     https://habr.com/ru/post/*
+// @include     https://habr.com/ru/company/*
+// @include     https://habr.com/ru/article/*
+// @include     https://habr.com/en/post/*
+// @include     https://habr.com/en/company/*
+// @include     https://habr.com/en/article/*
 // @grant       none
 // @run-at      document-start
-// @version     0.5.1
-// @downloadURL https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.user.js
-// @updateURL   https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.meta.js
+// @version     0.5.2
+// @downloadURL https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.user.js
+// @updateURL   https://bitbucket.org/liiws/habr-best-comments/downloads/habr-block-some-blocks.meta.js
 // ==/UserScript==
 
 
@@ -72,8 +53,10 @@ window.addEventListener('load', function () {
   // blank ads holder
   $(".dfp-slot").remove();
 
-  // bottom shit - interesting articles
+  // bottom shit
   $(".default-block__header-title:contains('Интересные публикации')").closest(".default-block").remove();
+  $(".default-block__header-title:contains('Самое читаемое')").closest(".default-block").remove();
+  $(".default-block__header-title:contains('Top posts')").closest(".default-block").remove();
   // other
   $(".promo-block__header").closest(".default-block_content").remove();
   
