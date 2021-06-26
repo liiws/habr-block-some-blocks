@@ -11,7 +11,7 @@
 // @include     https://habr.com/en/news/*
 // @grant       none
 // @run-at      document-start
-// @version     0.5.4
+// @version     0.5.5
 // @downloadURL https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.user.js
 // @updateURL   https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.meta.js
 // ==/UserScript==
@@ -59,6 +59,7 @@ window.addEventListener('load', function () {
   $(".default-block__header-title:contains('Интересные публикации')").closest(".default-block").remove();
   $(".default-block__header-title:contains('Самое читаемое')").closest(".default-block").remove();
   $(".default-block__header-title:contains('Top posts')").closest(".default-block").remove();
+  $(".column-wrapper.column-wrapper__last").remove();
   // other
   $(".promo-block__header").closest(".default-block_content").remove();
   
