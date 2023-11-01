@@ -11,7 +11,7 @@
 // @include     https://habr.com/en/news/*
 // @grant       none
 // @run-at      document-start
-// @version     0.5.5
-// @downloadURL https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.user.js
-// @updateURL   https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.meta.js
+// @version     0.5.6
+// @downloadURL https://github.com/liiws/habr-block-some-blocks/releases/download/release/habr-block-some-blocks.user.js
+// @updateURL   https://github.com/liiws/habr-block-some-blocks/releases/download/release/habr-block-some-blocks.meta.js
 // ==/UserScript==

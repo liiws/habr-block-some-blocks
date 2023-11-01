@@ -12,4 +12,4 @@
 
 # Скачать
 
-[habr-block-some-blocks.user.js](https://bitbucket.org/liiws/habr-block-some-blocks/downloads/habr-block-some-blocks.user.js).
+[habr-block-some-blocks.user.js](https://github.com/liiws/habr-block-some-blocks/releases/download/release/habr-block-some-blocks.user.js).
